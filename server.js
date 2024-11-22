@@ -25,6 +25,10 @@ const employeeSchema = new mongoose.Schema({
 
 const Employee = mongoose.model("Employee", employeeSchema);
 
+app.get("/", (req, res) => {
+  res.send("Hello from Node API");
+});
+
 // CRUD Endpoints
 // Get all employees
 app.get("/employees", async (req, res) => {
